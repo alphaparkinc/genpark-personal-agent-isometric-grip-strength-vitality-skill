@@ -1,0 +1,68 @@
+{
+  "name": "genpark-personal-agent-isometric-grip-strength-vitality-skill",
+  "version": "1.0.0",
+  "title": "Isometric Grip Strength & Biological Vitality Longevity Sentinel Skill",
+  "description": "Jamar hand dynamometer telemetry, biological functional age calibration, sarcopenia screening, and neuromuscular motor unit conditioning. Built for GenPark (https://www.genpark.ai).",
+  "homepage": "https://www.genpark.ai",
+  "linkedin": "https://www.linkedin.com/company/92955550",
+  "category": "personal-agent",
+  "topics": [
+    "grip-strength",
+    "longevity",
+    "sarcopenia",
+    "biological-age",
+    "personal-agent",
+    "model-context-protocol",
+    "genpark"
+  ],
+  "tools": [
+    {
+      "name": "assess_grip_strength_vitality_index",
+      "description": "Score isometric grip strength (kg) against age and gender normative cohorts for all-cause mortality risk.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "grip_dominant_kg": {
+            "type": "number"
+          },
+          "grip_non_dominant_kg": {
+            "type": "number"
+          },
+          "chronological_age": {
+            "type": "integer"
+          },
+          "gender": {
+            "type": "string",
+            "enum": [
+              "male",
+              "female"
+            ]
+          }
+        },
+        "required": [
+          "grip_dominant_kg",
+          "chronological_age",
+          "gender"
+        ]
+      }
+    },
+    {
+      "name": "synthesize_neuromuscular_grip_protocol",
+      "description": "Formulate targeted extensor/flexor loaded carries and crush grip progressive overload protocol.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "current_dominant_kg": {
+            "type": "number"
+          },
+          "target_tier": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "current_dominant_kg"
+        ]
+      }
+    }
+  ]
+}
